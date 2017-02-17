@@ -42,7 +42,7 @@ LockitronAccessory.prototype.getState = function(callback) {
       callback(null, locked); // success
     }
     else {
-      this.log("Error getting state (status code %s): %s", response.statusCode, err);
+      this.log("Error getting state (status code %s): %s", response && response.statusCode, err);
       callback(err);
     }
   }.bind(this));
